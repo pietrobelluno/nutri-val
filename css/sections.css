@@ -390,10 +390,10 @@
   border-left: 3px solid var(--color-butter);
 }
 
-.about__cat-callout-emoji {
-  font-size: 1.5rem;
+.about__cat-callout-icon {
+  width: 36px;
+  height: auto;
   flex-shrink: 0;
-  line-height: 1.5;
 }
 
 .about__cat-callout p {
@@ -983,7 +983,7 @@
 }
 
 .assessment__cat {
-  width: 100px;
+  width: 140px;
   height: auto;
   flex-shrink: 0;
   transform: scaleX(-1);

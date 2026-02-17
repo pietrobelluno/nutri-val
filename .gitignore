@@ -4,3 +4,4 @@ site-texts.pages
 *.pyc
 __pycache__/
 .env
+assets/images/*_backup.*
