@@ -1,0 +1,111 @@
+/* ============================================
+   DESIGN TOKENS — Valéria Schumann Nutricionista
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-butter:       #fceea8;
+  --color-butter-light: #fef8d6;
+  --color-cream:        #fffdf5;
+  --color-white:        #ffffff;
+  --color-black:        #1a1a1a;
+  --color-dark:         #2a2a2a;
+  --color-gray-600:     #4a4a4a;
+  --color-gray-400:     #8a8a8a;
+  --color-gray-200:     #d4d4d4;
+
+  /* Accent colors */
+  --color-green:        #3a7d44;
+  --color-green-light:  #e8f5e9;
+  --color-green-bg:     #f0f9f1;
+  --color-wine:         #722f37;
+  --color-wine-light:   #fce4ec;
+  --color-wine-bg:      #fdf0f2;
+  --color-whatsapp:     #25d366;
+  --color-whatsapp-hover: #1eba59;
+  --color-instagram:    #e1306c;
+
+  /* Assessment pastel cards */
+  --color-sage:           #e8f5e9;
+  --color-sage-accent:    #43a047;
+  --color-peach:          #fff3e0;
+  --color-peach-accent:   #ef6c00;
+  --color-lavender:       #ede7f6;
+  --color-lavender-accent:#5e35b1;
+
+  /* Highlight */
+  --highlight: linear-gradient(
+    180deg,
+    transparent 50%,
+    var(--color-butter) 50%
+  );
+
+  /* Typography */
+  --font-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-logo:    'Beam', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-hero:    clamp(2.5rem, 3.5vw + 0.8rem, 4.2rem);
+  --fs-h1:      clamp(2.2rem, 4vw + 0.5rem, 4rem);
+  --fs-h2:      clamp(1.8rem, 3vw + 0.5rem, 3rem);
+  --fs-h3:      clamp(1.3rem, 1.5vw + 0.5rem, 1.75rem);
+  --fs-body:    clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+  --fs-body-lg: clamp(1.1rem, 0.5vw + 1rem, 1.3rem);
+  --fs-small:   clamp(0.8rem, 0.3vw + 0.75rem, 0.9rem);
+  --fs-counter: clamp(3.5rem, 6vw + 1rem, 7rem);
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  --lh-tight:   1.1;
+  --lh-heading: 1.2;
+  --lh-body:    1.7;
+
+  --ls-tight:   -0.02em;
+  --ls-normal:  0;
+  --ls-wide:    0.05em;
+
+  /* Spacing */
+  --space-xs:    0.5rem;
+  --space-sm:    1rem;
+  --space-md:    1.5rem;
+  --space-lg:    2.5rem;
+  --space-xl:    4rem;
+  --space-2xl:   6rem;
+  --space-3xl:   8rem;
+  --space-section: clamp(5rem, 8vw + 2rem, 10rem);
+
+  /* Layout */
+  --container-max:   1280px;
+  --container-narrow: 960px;
+  --container-pad:   clamp(1.25rem, 3vw, 3rem);
+
+  /* Borders */
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-xl:  32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:    0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md:    0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg:    0 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-float: 0 12px 48px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:  cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-mid:  400ms;
+  --duration-slow: 700ms;
+
+  /* Z-index */
+  --z-base:      1;
+  --z-float:     10;
+  --z-nav:       100;
+  --z-overlay:   200;
+  --z-whatsapp:  150;
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Valéria Schumann — Nutricionista em Caxias do Sul. Acompanhamento nutricional personalizado, sem restrições absurdas, com ciência e comida de verdade.">
+  <meta name="theme-color" content="#fceea8">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Valéria Schumann — Nutricionista">
+  <meta property="og:description" content="Acompanhamento nutricional personalizado em Caxias do Sul. Ciência + comida de verdade.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-labcoat.png">
+
+  <title>Valéria Schumann — Nutricionista</title>
+
+  <!-- Favicon — all platforms -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Fonts: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to content (accessibility) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso de leitura da página"></div>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar" aria-label="Navegação principal">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <span class="navbar__logo-name">Valéria Schumann</span>
+        <span class="navbar__logo-sub">Nutricionista</span>
+      </a>
+
+      <div class="navbar__links">
+        <a href="#sobre">Sobre</a>
+        <a href="#consultas">Consultas</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <button class="navbar__hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="navbar__overlay" id="mobileMenu" role="dialog" aria-label="Menu de navegação" aria-modal="true">
+      <a href="#sobre">Sobre</a>
+      <a href="#consultas">Consultas</a>
+      <a href="#avaliacao">Avaliação</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+
+  <main id="main-content">
+
+  <!-- ====== HERO ====== -->
+  <section class="hero section" id="hero">
+    <!-- Floating food doodles -->
+    <span class="hero__deco" style="top:8%;left:3%;animation-delay:0s" aria-hidden="true">&#129361;</span>
+    <span class="hero__deco" style="top:55%;right:2%;animation-delay:2s" aria-hidden="true">&#127819;</span>
+    <span class="hero__deco" style="bottom:22%;left:6%;animation-delay:3.5s" aria-hidden="true">&#129388;</span>
+    <span class="hero__deco" style="bottom:35%;right:8%;animation-delay:1s" aria-hidden="true">&#127815;</span>
+    <span class="hero__deco" style="top:30%;left:1%;animation-delay:4.5s" aria-hidden="true">&#127820;</span>
+    <span class="hero__deco" style="top:18%;right:12%;animation-delay:1.5s" aria-hidden="true">&#129382;</span>
+    <span class="hero__deco" style="bottom:10%;left:15%;animation-delay:5s" aria-hidden="true">&#127813;</span>
+    <span class="hero__deco" style="top:70%;left:2%;animation-delay:2.5s" aria-hidden="true">&#129365;</span>
+    <span class="hero__deco" style="bottom:40%;right:4%;animation-delay:4s" aria-hidden="true">&#127827;</span>
+    <span class="hero__deco" style="top:5%;right:25%;animation-delay:3s" aria-hidden="true">&#127822;</span>
+    <span class="hero__deco" style="bottom:15%;right:15%;animation-delay:0.5s" aria-hidden="true">&#129370;</span>
+    <span class="hero__deco" style="top:45%;left:8%;animation-delay:6s" aria-hidden="true">&#127826;</span>
+
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <h1 class="text-hero hero__headline">Se você chegou até aqui, o primeiro passo — e talvez o mais corajoso — já foi dado.</h1>
+          <p class="hero__subtitle">Acompanhamento nutricional de verdade: sem fórmulas mágicas, sem terrorismo alimentar. Só ciência, acolhimento e um plano que cabe na sua vida.</p>
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary" data-whatsapp="Olá, Val! Gostaria de agendar uma consulta.">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Agendar consulta
+            </a>
+          </div>
+        </div>
+        <div class="hero__illus">
+          <img src="assets/images/hero-labcoat.png" alt="Valéria comemorando de jaleco com brócolis e cenoura nos bolsos" width="460" height="680">
+        </div>
+      </div>
+
+      <!-- Scroll hint (desktop only) -->
+      <a href="#sobre" class="hero__scroll-hint" aria-label="Rolar para próxima seção">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--hero-about" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C240,55 480,5 720,30 C960,55 1200,10 1440,25 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- ====== SOBRE ====== -->
+  <section class="about section" id="sobre">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__illus-wrap reveal-left">
+          <span class="about__speech-bubble" aria-hidden="true">Vamos, diva! &#10024;</span>
+          <img class="about__illus-main" src="assets/images/about-cats.png" alt="Valéria sentada com seus três gatos" loading="lazy" width="460" height="700">
+          <!-- welcome-shrug moved to cards section -->
+        </div>
+        <div class="about__text reveal-right stagger">
+          <h2 class="h1 mb-md">Muito prazer, Valéria Schumann!</h2>
+          <p>Nutricionista formada pela UCS, apaixonada por <span class="highlight">comida de verdade</span> e por mostrar que comer bem não precisa ser chato, triste ou sem graça.</p>
+          <p>Acredito que dá pra comer bonito, gostoso e nutritivo ao mesmo tempo — e que ninguém precisa abrir mão do <span class="highlight">prazer de comer</span> pra cuidar da saúde.</p>
+          <p>Meu trabalho é traduzir a ciência da nutrição em algo que faça sentido na sua rotina — sem terrorismo, sem neura, sem listas intermináveis do que "não pode". Aqui a gente come, a gente vive, e a gente evolui junta.</p>
+          <div class="about__cat-callout">
+            <span class="about__cat-callout-emoji" aria-hidden="true">&#128049;</span>
+            <p>E sim, sou mãe de gato. Três, na verdade. Eles não opinam nos planos alimentares, mas dão apoio moral.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== O QUE VOCÊ BUSCA / O QUE NÃO VAI ENCONTRAR ====== -->
+  <section class="cards-section section" id="busca">
+    <!-- Floating food doodles -->
+    <span class="cards-section__deco" style="top:6%;left:3%;animation-delay:0s" aria-hidden="true">&#129361;</span>
+    <span class="cards-section__deco" style="top:14%;right:5%;animation-delay:1.5s" aria-hidden="true">&#127822;</span>
+    <span class="cards-section__deco" style="bottom:18%;left:8%;animation-delay:3s" aria-hidden="true">&#129365;</span>
+    <span class="cards-section__deco" style="top:40%;left:1%;animation-delay:4s" aria-hidden="true">&#127813;</span>
+    <span class="cards-section__deco" style="bottom:8%;right:4%;animation-delay:2s" aria-hidden="true">&#129382;</span>
+    <span class="cards-section__deco" style="top:55%;right:2%;animation-delay:5s" aria-hidden="true">&#127827;</span>
+    <span class="cards-section__deco" style="bottom:30%;left:2%;animation-delay:1s" aria-hidden="true">&#127820;</span>
+
+    <div class="container">
+      <div class="text-center mb-lg reveal-up" style="margin-bottom:var(--space-xl)">
+        <span class="section-tag">&#127860; Cardápio do acompanhamento</span>
+        <h2 class="h1">O que <span class="highlight">te espera</span> por aqui</h2>
+      </div>
+
+      <div class="cards-section__grid">
+        <!-- Decorative shrug illustration -->
+        <img class="cards-section__shrug" src="assets/images/welcome-shrug.png" alt="" aria-hidden="true" loading="lazy" width="200" height="340">
+
+        <!-- Yes card -->
+        <div class="menu-card menu-card--yes reveal-left">
+          <span class="menu-card__badge menu-card__badge--green">&#10003; Sim!</span>
+          <h3 class="menu-card__title">O que você vai encontrar</h3>
+          <ul class="menu-card__list stagger">
+            <li><span class="menu-card__emoji" aria-hidden="true">&#129367;</span><span>Mudança de hábitos que dura de verdade</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#9889;</span><span>Mais energia e disposição no dia a dia</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#127811;</span><span>Digestão leve (tchau, inchaço!)</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#128170;</span><span>Performance pra treinar com tudo</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#128203;</span><span>Um plano alimentar que você realmente consegue seguir</span></li>
+          </ul>
+        </div>
+
+        <!-- No card -->
+        <div class="menu-card menu-card--no reveal-right">
+          <span class="menu-card__badge menu-card__badge--wine">&#10007; Não!</span>
+          <h3 class="menu-card__title">O que não vai encontrar</h3>
+          <ul class="menu-card__list stagger">
+            <li><span class="menu-card__emoji" aria-hidden="true">&#128683;</span><span>Dietas restritivas e punição</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#128581;</span><span>Promessas de milagre ou emagrecimento relâmpago</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#10060;</span><span>Listas de "alimentos proibidos"</span></li>
+            <li><span class="menu-card__emoji" aria-hidden="true">&#128548;</span><span>Terrorismo alimentar ou culpa no prato</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="postit-note mt-lg reveal-up">
+        Atendimento exclusivo para adultos e adolescentes (a partir de 12 anos acompanhados dos responsáveis).
+      </div>
+    </div>
+  </section>
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--cards-consult" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,35 C180,10 360,50 540,25 C720,0 900,45 1080,20 C1260,0 1380,30 1440,20 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- ====== PRIMEIRA CONSULTA ====== -->
+  <section class="consultation section" id="consultas">
+    <!-- Floating food doodles -->
+    <span class="consultation__deco" style="top:10%;right:4%;animation-delay:0s" aria-hidden="true">&#9749;</span>
+    <span class="consultation__deco" style="bottom:15%;left:3%;animation-delay:2.5s" aria-hidden="true">&#129382;</span>
+    <span class="consultation__deco" style="top:50%;left:1%;animation-delay:4s" aria-hidden="true">&#128221;</span>
+
+    <div class="container">
+      <div class="consultation__grid">
+        <div class="reveal-up">
+          <h2 class="h1 mb-md">Nosso primeiro encontro</h2>
+
+          <div class="consultation__counter-wrap">
+            <span class="consultation__counter-prefix">até</span>
+            <span class="text-counter consultation__counter" data-counter="2" data-suffix="h" aria-label="até 2 horas de consulta">0h</span>
+            <span class="consultation__counter-label">de consulta</span>
+          </div>
+
+          <p class="text-lg mb-md">A primeira consulta é profunda: quero entender de verdade quem você é, como come, como vive, o que sente, o que quer mudar.</p>
+          <p class="mb-md">Não é aquela consulta genérica de 20 minutos com dieta impressa. É uma conversa de verdade — com escuta, com ciência, e com um plano alimentar 100% personalizado.</p>
+
+          <div class="flex flex-gap-sm flex-wrap stagger">
+            <span class="badge badge--dark">Plano alimentar personalizado</span>
+            <span class="badge badge--outline">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Entregue em até 3 dias úteis
+            </span>
+          </div>
+        </div>
+
+        <div class="consultation__illus reveal-scale">
+          <img src="assets/images/consultation-laptop.png" alt="Valéria no laptop preparando seu plano alimentar" loading="lazy" width="460" height="660">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== RETORNOS ====== -->
+  <section class="returns section" id="retornos">
+    <!-- Floating doodles -->
+    <span class="returns__deco" style="top:8%;right:5%;animation-delay:0.5s" aria-hidden="true">&#127939;</span>
+    <span class="returns__deco" style="bottom:12%;left:4%;animation-delay:3s" aria-hidden="true">&#9201;</span>
+    <span class="returns__deco" style="top:45%;right:2%;animation-delay:1.5s" aria-hidden="true">&#128170;</span>
+
+    <div class="container">
+      <div class="returns__grid">
+        <div class="returns__illus reveal-left">
+          <img src="assets/images/active-running.png" alt="Valéria correndo com óculos de sol" loading="lazy" width="400" height="580">
+        </div>
+
+        <div class="reveal-right">
+          <h2 class="h1 mb-md">Retornos</h2>
+
+          <div class="returns__counter-wrap">
+            <span class="text-counter returns__counter" data-counter="45" data-suffix="min" aria-label="45 minutos por consulta">0min</span>
+            <span class="returns__counter-label">por consulta</span>
+          </div>
+
+          <p class="text-lg mb-md">O retorno é onde a mágica acontece: a gente revisa, ajusta, celebra cada conquista e resolve o que não fluiu.</p>
+          <p class="mb-md">Inclui acompanhamento de evolução, avaliação antropométrica e ajustes no plano alimentar. Cada consulta é única porque você muda — e o plano muda com você.</p>
+
+          <div class="returns__location">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Consultório em Caxias do Sul ou Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== MARQUEE STRIP ====== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>comida de verdade</span><span class="marquee__sep">&#10022;</span>
+      <span>sem terrorismo</span><span class="marquee__sep">&#10022;</span>
+      <span>vamos diva</span><span class="marquee__sep">&#10022;</span>
+      <span>tá bafo</span><span class="marquee__sep">&#10022;</span>
+      <span>ciência + vida real</span><span class="marquee__sep">&#10022;</span>
+      <span>sem neura</span><span class="marquee__sep">&#10022;</span>
+      <span>comer bem sem sofrer</span><span class="marquee__sep">&#10022;</span>
+      <span>seu prato, suas regras</span><span class="marquee__sep">&#10022;</span>
+      <span>comida de verdade</span><span class="marquee__sep">&#10022;</span>
+      <span>sem terrorismo</span><span class="marquee__sep">&#10022;</span>
+      <span>vamos diva</span><span class="marquee__sep">&#10022;</span>
+      <span>tá bafo</span><span class="marquee__sep">&#10022;</span>
+      <span>ciência + vida real</span><span class="marquee__sep">&#10022;</span>
+      <span>sem neura</span><span class="marquee__sep">&#10022;</span>
+      <span>comer bem sem sofrer</span><span class="marquee__sep">&#10022;</span>
+      <span>seu prato, suas regras</span><span class="marquee__sep">&#10022;</span>
+    </div>
+  </div>
+
+
+  <!-- ====== AVALIAÇÃO ANTROPOMÉTRICA ====== -->
+  <section class="assessment section" id="avaliacao">
+    <div class="container">
+      <div class="assessment__header reveal-up">
+        <div class="assessment__illus">
+          <img src="assets/images/anthropometric-calipers.png" alt="Valéria segurando adipômetro" loading="lazy" width="180" height="225">
+        </div>
+        <div>
+          <span class="assessment__label">Avaliação</span>
+          <h2 class="h1">Avaliação Antropométrica</h2>
+        </div>
+      </div>
+
+      <div class="assessment__cards stagger">
+        <div class="assessment-card assessment-card--sage reveal-up">
+          <span class="assessment-card__num">01</span>
+          <div class="assessment-card__icon" aria-hidden="true">&#9889;</div>
+          <h3 class="assessment-card__title">Bioimpedância</h3>
+          <p>Análise completa da composição corporal: massa magra, gordura, água corporal e metabolismo basal. Rápida, indolor e super precisa.</p>
+        </div>
+
+        <div class="assessment-card assessment-card--peach reveal-up">
+          <span class="assessment-card__num">02</span>
+          <div class="assessment-card__icon" aria-hidden="true">&#128207;</div>
+          <h3 class="assessment-card__title">Dobras Cutâneas</h3>
+          <p>Método clássico com adipômetro para medir a gordura subcutânea em pontos estratégicos. Complementa a bioimpedância com dados localizados.</p>
+        </div>
+
+        <div class="assessment-card assessment-card--lavender reveal-up">
+          <span class="assessment-card__num">03</span>
+          <div class="assessment-card__icon" aria-hidden="true">&#129302;</div>
+          <h3 class="assessment-card__title">Inteligência Artificial</h3>
+          <p>Tecnologia de ponta que cruza dados de múltiplas avaliações para gerar um panorama completo e personalizado da sua evolução.</p>
+        </div>
+      </div>
+
+      <div class="assessment__footer reveal-up">
+        <img class="assessment__cat" src="assets/images/assessment-cat.png" alt="Gato preto deitado relaxando" loading="lazy" width="200" height="160">
+        <p class="assessment__footer-text">Pode ficar tranquila com os resultados — a gente analisa tudo sem julgamento. Aqui nenhum número define quem você é.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--assess-cta" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,55 720,5 1080,35 C1260,45 1380,15 1440,25 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- ====== CTA ====== -->
+  <section class="cta section" id="contato">
+    <!-- Floating sparkles -->
+    <span class="cta__deco" style="top:15%;left:5%;animation-delay:0s" aria-hidden="true">&#10024;</span>
+    <span class="cta__deco" style="bottom:20%;right:3%;animation-delay:2s" aria-hidden="true">&#128170;</span>
+    <span class="cta__deco" style="top:55%;left:8%;animation-delay:3.5s" aria-hidden="true">&#127775;</span>
+
+    <div class="container">
+      <div class="cta__content">
+        <span class="section-tag reveal-up">&#10024; Hora de agir</span>
+        <h2 class="h1 cta__headline reveal-up">Vamos juntas, <span class="highlight">diva</span>?</h2>
+        <p class="cta__subtitle reveal-up">O prato dos seus sonhos tá a uma consulta de distância. Bora?</p>
+
+        <div class="cta__buttons reveal-scale">
+          <a href="#" class="btn btn--whatsapp" data-whatsapp="Olá, Val! Gostaria de agendar uma consulta.">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="https://www.instagram.com/valeria.schumann/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Me segue no Insta
+          </a>
+        </div>
+
+        <p class="cta__ps reveal-up">P.S.: Você merece se sentir bem no seu corpo. &#128155;</p>
+      </div>
+
+      <img class="cta__illus cta__illus--right reveal-rotate" src="assets/images/strength-squat.png" alt="Valéria fazendo agachamento com barra" loading="lazy" width="300" height="320">
+      <img class="cta__illus cta__illus--left reveal-rotate" src="assets/images/fitness-dumbbell.png" alt="Valéria erguendo peso" loading="lazy" width="300" height="400">
+    </div>
+  </section>
+
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--cta-footer" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,25 C240,0 480,45 720,20 C960,0 1200,40 1440,25 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container reveal-up stagger">
+      <div class="footer__accent-line" aria-hidden="true"></div>
+
+      <div class="footer__logo">Valéria Schumann</div>
+      <p class="footer__role">Nutricionista · CRN2 · UCS</p>
+      <p class="footer__tagline">Feito com amor, ciência e comida de verdade</p>
+
+      <div class="footer__socials">
+        <a href="#" data-whatsapp="Olá, Val!" aria-label="WhatsApp">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/valeria.schumann/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Valéria Schumann. Todos os direitos reservados.</p>
+        <a href="#hero" class="footer__back-top" aria-label="Voltar ao topo">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ====== FLOATING WHATSAPP ====== -->
+  <a href="#" class="whatsapp-float" aria-label="Agendar pelo WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

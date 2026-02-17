@@ -1,0 +1,312 @@
+/* ============================================
+   RESPONSIVE — Mobile first breakpoints
+   ============================================ */
+
+/* ---- 480px+ (Large phones) ---- */
+@media (min-width: 480px) {
+  /* Cards stay single column until 768px */
+}
+
+/* ---- 768px+ (Tablets) ---- */
+@media (min-width: 768px) {
+  /* Navbar */
+  .navbar__hamburger {
+    display: none !important;
+  }
+
+  .navbar__links {
+    display: flex !important;
+  }
+
+  /* Hero — full viewport on tablet+ */
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .hero__text {
+    max-width: none;
+  }
+
+  .hero__scroll-hint {
+    display: block;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .about__illus-deco {
+    width: 130px;
+    top: 0;
+    left: 55%;
+  }
+
+  /* Cards */
+  .cards-section__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Consultation */
+  .consultation__grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  /* Returns */
+  .returns__grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  /* Assessment — stay single column until desktop */
+  .assessment__cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA */
+  .cta__illus {
+    display: block;
+  }
+}
+
+/* ---- 1024px+ (Desktop) ---- */
+@media (min-width: 1024px) {
+  /* Assessment cards — 3 columns */
+  .assessment__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* CTA decoration */
+  .cta__illus {
+    width: 200px;
+  }
+
+  .hero__illus img {
+    max-width: 440px;
+  }
+
+  .about__illus-main {
+    max-width: 400px;
+  }
+
+  .about__illus-deco {
+    width: 150px;
+  }
+}
+
+/* ---- 1280px+ (Large desktop) ---- */
+@media (min-width: 1280px) {
+  .hero__illus img {
+    max-width: 480px;
+  }
+
+  .cta__illus {
+    width: 220px;
+  }
+}
+
+/* ---- Below 768px (Mobile) ---- */
+@media (max-width: 767px) {
+  /* Navbar mobile */
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Hero: image ABOVE text on mobile */
+  .hero__grid {
+    text-align: center;
+    gap: var(--space-md);
+  }
+
+  .hero__illus {
+    order: -1;
+  }
+
+  .hero__illus img {
+    max-width: 200px;
+  }
+
+  .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__cta {
+    justify-content: center;
+    display: flex;
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+
+  /* About: show illustration, centered */
+  .about__illus-deco {
+    width: 70px;
+    top: 0;
+    left: auto;
+    right: 5%;
+  }
+
+  .about__speech-bubble {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.8rem;
+    left: 0;
+    top: 0;
+  }
+
+  .about__grid {
+    text-align: center;
+  }
+
+  .about__illus-main {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  /* Cards: reduce rotation on mobile */
+  .menu-card--yes { transform: rotate(-0.8deg); }
+  .menu-card--no  { transform: rotate(0.8deg); }
+  .postit-note    { transform: rotate(-1deg); }
+
+  .cards-section__deco { font-size: 1.5rem; opacity: 0.1; }
+
+  /* Consultation */
+  .consultation__illus img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .consultation__grid {
+    text-align: center;
+  }
+
+  .consultation__counter-wrap {
+    justify-content: center;
+  }
+
+  /* Returns */
+  .returns__illus img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .returns__grid {
+    text-align: center;
+  }
+
+  .returns__counter-wrap {
+    justify-content: center;
+  }
+
+  .returns__location {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Assessment */
+  .assessment__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .assessment__label {
+    justify-content: center;
+  }
+
+  .assessment__illus img {
+    width: 200px;
+  }
+
+  .assessment-card {
+    padding: var(--space-md);
+  }
+
+  .assessment-card__num {
+    font-size: 4.5rem;
+  }
+
+  /* Hero deco — subtle on mobile */
+  .hero__deco { font-size: 1.4rem; opacity: 0.12; }
+
+  /* Section deco — subtle on mobile */
+  .consultation__deco { font-size: 1.3rem; opacity: 0.06; }
+  .returns__deco { font-size: 1.3rem; opacity: 0.06; }
+  .cta__deco { font-size: 1.2rem; opacity: 0.06; }
+
+  /* Footer back-to-top centered on mobile */
+  .footer__back-top {
+    position: static;
+    margin: var(--space-md) auto 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
+
+  /* CTA — show right illus as subtle bg on mobile, hide left */
+  .cta__illus {
+    position: absolute;
+    width: 160px;
+    bottom: -20px;
+    opacity: 0.15;
+  }
+
+  .cta__illus--left {
+    display: none;
+  }
+
+  .cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---- Below 480px (Small phones) ---- */
+@media (max-width: 479px) {
+  .section {
+    padding-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: var(--space-lg);
+  }
+
+  .hero__illus img {
+    max-width: 180px;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .footer {
+    padding: var(--space-lg) 0;
+  }
+
+  /* Smaller decorative dots on small screens */
+  .about::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .returns::after {
+    width: 40px;
+    height: 40px;
+  }
+}

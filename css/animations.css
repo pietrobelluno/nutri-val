@@ -1,0 +1,311 @@
+/* ============================================
+   ANIMATIONS — Keyframes + Reveal + Stagger
+   ============================================ */
+
+/* ---- KEYFRAMES ---- */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+@keyframes float-alt {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-8deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-8deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Scroll hint bounce */
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(5px);
+  }
+}
+
+/* Shimmer for highlight text */
+@keyframes shimmer {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+/* Marquee infinite scroll */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* WhatsApp float entrance */
+@keyframes whatsappIn {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Glow pulse for WhatsApp button */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.65);
+  }
+}
+
+/* Counter pop */
+@keyframes counterPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* ---- SCROLL REVEAL CLASSES ---- */
+/* Initial hidden state */
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-rotate {
+  opacity: 0;
+  transition: all var(--duration-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-scale {
+  transform: scale(0.85);
+}
+
+.reveal-rotate {
+  transform: rotate(-5deg) scale(0.9);
+}
+
+/* Revealed state (toggled by JS) */
+.revealed {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+}
+
+
+/* ---- STAGGER SYSTEM ---- */
+/* Children of .stagger start hidden and animate in when parent gets .revealed */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--duration-mid) var(--ease-out),
+              transform var(--duration-mid) var(--ease-out);
+}
+
+/* Trigger: parent with .stagger gets .revealed directly */
+.stagger.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Trigger: ancestor has .revealed and descendant is .stagger */
+.revealed .stagger > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays — snappy 80ms intervals */
+.stagger > *:nth-child(1) { transition-delay: 80ms; }
+.stagger > *:nth-child(2) { transition-delay: 160ms; }
+.stagger > *:nth-child(3) { transition-delay: 240ms; }
+.stagger > *:nth-child(4) { transition-delay: 320ms; }
+.stagger > *:nth-child(5) { transition-delay: 400ms; }
+.stagger > *:nth-child(6) { transition-delay: 480ms; }
+.stagger > *:nth-child(7) { transition-delay: 560ms; }
+.stagger > *:nth-child(8) { transition-delay: 640ms; }
+
+
+/* ---- HERO ENTRANCE (page load, not scroll) ---- */
+.hero-enter .hero__illus img {
+  animation: scaleIn 0.7s var(--ease-bounce) 0.1s both,
+             float 6s ease-in-out 1s infinite;
+}
+
+.hero-enter .hero__headline {
+  animation: fadeInUp 0.8s var(--ease-out) 0.25s both;
+}
+
+.hero-enter .hero__subtitle {
+  animation: fadeInUp 0.8s var(--ease-out) 0.45s both;
+}
+
+.hero-enter .hero__cta {
+  animation: fadeInUp 0.8s var(--ease-out) 0.6s both;
+}
+
+.hero-enter .hero__scroll-hint {
+  animation: fadeInUp 0.6s var(--ease-out) 1s both;
+}
+
+
+/* ---- HIGHLIGHT SHIMMER ---- */
+/* Highlights animate their background-size when revealed */
+.reveal-up .highlight,
+.reveal-right .highlight,
+.reveal-left .highlight,
+.revealed .highlight {
+  animation: shimmer 0.8s var(--ease-out) 0.3s both;
+}
+
+
+/* ---- WHATSAPP FLOAT GLOW ---- */
+.whatsapp-float.visible {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+
+/* ---- COUNTER POP ---- */
+.text-counter.counted {
+  animation: counterPop 0.4s var(--ease-bounce) both;
+}
+
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-rotate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0ms !important;
+  }
+
+  .hero__illus img,
+  .about__illus-deco,
+  .about__speech-bubble {
+    animation: none !important;
+  }
+
+  .marquee__track {
+    animation: none !important;
+  }
+
+  /* Show WhatsApp float immediately */
+  .whatsapp-float {
+    opacity: 1 !important;
+    transform: scale(1) translateY(0) !important;
+  }
+}

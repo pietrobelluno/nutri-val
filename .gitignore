@@ -1,0 +1,6 @@
+.DS_Store
+.claude/
+site-texts.pages
+*.pyc
+__pycache__/
+.env

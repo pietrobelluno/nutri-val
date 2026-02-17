@@ -1,0 +1,108 @@
+/* ============================================
+   TYPOGRAPHY — @font-face + Hierarchy
+   ============================================ */
+
+/* Beam — Hand-drawn logo font */
+@font-face {
+  font-family: 'Beam';
+  src: url('../assets/fonts/TayBea/Beam.woff2') format('woff2'),
+       url('../assets/fonts/TayBea/Beam.woff') format('woff'),
+       url('../assets/fonts/TayBea/Beam.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DM Sans — Body font (Google Fonts loaded in HTML) */
+
+/* Base */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-black);
+}
+
+/* Display / Hero */
+.text-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+
+  word-spacing: normal;
+  color: var(--color-black);
+}
+
+/* Headings */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.02em;
+
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.02em;
+
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+
+}
+
+/* Body sizes */
+.text-lg {
+  font-size: var(--fs-body-lg);
+}
+
+.text-sm {
+  font-size: var(--fs-small);
+}
+
+/* Special */
+.text-counter {
+  font-family: var(--font-display);
+  font-size: var(--fs-counter);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+
+}
+
+/* Serif accent for display font */
+.font-display {
+
+  word-spacing: 0.08em;
+}
+
+/* Highlight mark — yellow underline effect with reveal shimmer */
+.highlight {
+  background-image: var(--highlight);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  padding: 0 0.15em;
+  display: inline;
+}
+
+/* Serif accent for special words */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Text colors */
+.text-white { color: var(--color-white); }
+.text-muted { color: var(--color-gray-600); }
+.text-butter { color: var(--color-butter); }
