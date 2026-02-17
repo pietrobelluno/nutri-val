@@ -328,7 +328,6 @@
   grid-template-columns: 1fr;
   gap: var(--space-xl);
   align-items: center;
-  overflow: hidden;
 }
 
 .about__illus-wrap {
