@@ -398,9 +398,9 @@
 }
 
 .about__cat-callout p {
-  font-size: var(--fs-small) !important;
+  font-size: var(--fs-body) !important;
+  font-weight: var(--fw-bold) !important;
   color: var(--color-gray-600) !important;
-  font-style: italic;
   margin-bottom: 0 !important;
 }
 
@@ -966,16 +966,18 @@
   color: var(--color-lavender-accent);
 }
 
-/* Assessment footer — cat + casual text */
+/* Assessment footer — cat on top, text below */
 .assessment__footer {
   margin-top: var(--space-xl);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
+  text-align: center;
+  gap: var(--space-sm);
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-md) var(--space-lg);
   background: var(--color-butter-light);
   border-radius: var(--radius-lg);
   border: 2px dashed var(--color-butter);
@@ -991,8 +993,8 @@
 
 .assessment__footer-text {
   font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
   color: var(--color-gray-600);
-  font-style: italic;
   line-height: var(--lh-body);
 }
 
