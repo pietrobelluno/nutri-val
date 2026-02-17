@@ -422,7 +422,9 @@
 
 /* ---- CARDS SECTION (What you seek / What you won't find) ---- */
 .cards-section {
-  background: radial-gradient(ellipse at 50% 20%, var(--color-butter-light) 0%, var(--color-white) 65%);
+  background:
+    linear-gradient(180deg, var(--color-butter-light) 0%, var(--color-white) 18%),
+    radial-gradient(ellipse at 50% 30%, var(--color-butter-light) 0%, var(--color-white) 65%);
   position: relative;
   overflow: hidden;
 }

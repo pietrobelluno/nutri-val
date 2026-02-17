@@ -178,7 +178,11 @@
 
   .cards-section__deco { font-size: 1.5rem; opacity: 0.1; }
 
-  /* Consultation */
+  /* Consultation — image above text on mobile */
+  .consultation__illus {
+    order: -1;
+  }
+
   .consultation__illus img {
     max-width: 240px;
     margin: 0 auto;
@@ -189,6 +193,11 @@
   }
 
   .consultation__counter-wrap {
+    justify-content: center;
+  }
+
+  /* Badges centered on mobile */
+  .consultation .flex {
     justify-content: center;
   }
 
