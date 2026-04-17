@@ -240,6 +240,10 @@
   animation: fadeInUp 0.8s var(--ease-out) 0.6s both;
 }
 
+.hero-enter .hero__availability {
+  animation: fadeInUp 0.8s var(--ease-out) 0.75s both;
+}
+
 .hero-enter .hero__scroll-hint {
   animation: fadeInUp 0.6s var(--ease-out) 1s both;
 }

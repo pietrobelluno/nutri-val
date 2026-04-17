@@ -346,6 +346,35 @@
     });
   }
 
+  /* ---- ANALYTICS: OUTBOUND CLICK TRACKING ---- */
+  function trackOutboundClick(anchorEl) {
+    if (typeof window.gtag !== 'function') return;
+
+    var href = anchorEl.href || '';
+    var destination = 'other';
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+      destination = 'whatsapp';
+    } else if (href.indexOf('instagram.com') !== -1) {
+      destination = 'instagram';
+    }
+
+    window.gtag('event', 'outbound_click', {
+      destination: destination,
+      link_url: href,
+      link_text: (anchorEl.textContent || '').trim().slice(0, 80),
+      link_location: anchorEl.closest('section, footer, aside, nav')
+        ? (anchorEl.closest('section, footer, aside, nav').id || anchorEl.closest('section, footer, aside, nav').tagName.toLowerCase())
+        : 'unknown'
+    });
+  }
+
+  function initAnalytics() {
+    var outboundSelector = 'a[href*="wa.me"], a[href*="whatsapp"], a[href*="instagram.com"], [data-whatsapp]';
+    document.querySelectorAll(outboundSelector).forEach(function (a) {
+      a.addEventListener('click', function () { trackOutboundClick(a); });
+    });
+  }
+
   /* ---- PARALLAX LITE ---- */
   function initParallax() {
     /* Respect prefers-reduced-motion */
@@ -380,6 +409,7 @@
     initCounterAnimations();
     initWhatsAppLinks();
     initWhatsAppFloat();
+    initAnalytics();
     initParallax();
   }
 
