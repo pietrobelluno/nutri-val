@@ -1,20 +1,21 @@
 # Nutri-Val — Progress
 
 ## Current Status
-**Phase**: Growth prep — influencer campaign incoming
-**Last Updated**: 2026-04-17
+**Phase**: Growth prep — influencer campaign incoming, i18n requested
+**Last Updated**: 2026-04-20
 **Live URL**: https://valeriaschumann.com.br (custom domain) / https://pietrobelluno.github.io/nutri-val/
 
 ## In Progress
+- [ ] **English version of site** (user requested) — full translation at `/en/index.html`, language switcher in navbar, hreflang tags, sitemap update, English WhatsApp messages
 - [ ] Meta Pixel install (waiting on Val to create + send Pixel ID)
 - [ ] Domain verification in Meta Business (needs DNS TXT record after Pixel)
 - [ ] LGPD cookie notice (minimal footer line, or banner with opt-out)
 
 ## Next Session Should
+- **Start with English version** — substantial translation work. Voice is tricky ("Bora!" doesn't translate literally); use energetic-but-warm English tone. Share CSS/JS/images from root; use relative path `../` from `/en/`. Add `<link rel="alternate" hreflang="pt-BR">` / `<link rel="alternate" hreflang="en">` in both files. Update sitemap.xml.
 - Drop Meta Pixel ID in head + fire `Contact`/`Lead` events on WhatsApp click
 - Build UTM link for influencer post before she posts
 - Verify GA4 real-time shows events after deploy propagates
-- Consider adding lazy loading audit
 
 ---
 
@@ -37,7 +38,7 @@
 - Pulse dot on "Online" pill signals live/available availability without explicit text
 - GA4 installed with standard snippet (not GTM) — 2 pixels doesn't warrant GTM complexity yet
 - Meta Pixel identified as critical pre-influencer install for future ads optimization
-**Commits**: 89f9b1a
+**Commits**: 89f9b1a, 945da53, 6abca1f (Brasil→mundo), e1b8d7d (wording fix: "pro mundo todo" — avoids implying Val travels)
 
 ### Session 2 (2026-02-17)
 **Focus**: GitHub Pages deploy, gender-neutral text, mobile fixes, image optimization, grammar audit
