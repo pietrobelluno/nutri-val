@@ -226,6 +226,42 @@
   color: var(--color-gray-600);
 }
 
+/* ---- LANGUAGE SWITCHER ---- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-left: var(--space-sm);
+  z-index: calc(var(--z-overlay) + 2);
+  position: relative;
+}
+
+.lang-switch__opt {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.05em;
+  color: var(--color-gray-600);
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.lang-switch__opt:hover {
+  color: var(--color-black);
+}
+
+.lang-switch__opt[aria-current="page"] {
+  background: var(--color-black);
+  color: var(--color-butter);
+  cursor: default;
+}
+
 /* ---- FLOATING WHATSAPP BUTTON ---- */
 .whatsapp-float {
   position: fixed;

@@ -7,7 +7,10 @@
 
   /* ---- CONFIG ---- */
   var WHATSAPP_NUMBER = '5554996060202';
-  var DEFAULT_MESSAGE = 'Olá, Val! Gostaria de agendar uma consulta.';
+  var _docLang = (document.documentElement.lang || '').toLowerCase();
+  var DEFAULT_MESSAGE = _docLang.indexOf('en') === 0
+    ? "Hi, Val! I'd like to book a consultation."
+    : 'Olá, Val! Gostaria de agendar uma consulta.';
 
   /* ---- HELPERS ---- */
   function buildWhatsAppURL(message) {
