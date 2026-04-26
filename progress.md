@@ -1,23 +1,54 @@
 # Nutri-Val — Progress
 
 ## Current Status
-**Phase**: Growth prep — influencer campaign incoming, i18n requested
-**Last Updated**: 2026-04-20
-**Live URL**: https://valeriaschumann.com.br (custom domain) / https://pietrobelluno.github.io/nutri-val/
+**Phase**: Live PT+EN, exploring marketing MCP stack for client acquisition
+**Last Updated**: 2026-04-26
+**Live URL**: https://valeriaschumann.com.br (PT) + https://valeriaschumann.com.br/en/ (EN)
 
 ## In Progress
-- [ ] **English version of site** (user requested) — full translation at `/en/index.html`, language switcher in navbar, hreflang tags, sitemap update, English WhatsApp messages
-- [ ] Meta Pixel install (waiting on Val to create + send Pixel ID)
-- [ ] Domain verification in Meta Business (needs DNS TXT record after Pixel)
-- [ ] LGPD cookie notice (minimal footer line, or banner with opt-out)
+- [ ] **Marketing MCP stack planning** — plan written at `~/.claude/plans/gostaria-que-o-site-spicy-taco.md`. Phased approach: GA4 + Search Console (free, read) → keyword research → Google Ads + Meta Ads (paid). Awaiting user decision on scope.
+- [ ] Meta Pixel install (still pending — Val to send Pixel ID)
+- [ ] Domain verification in Meta Business
+- [ ] LGPD cookie notice
+- [ ] sitemap.xml update to include `/en/`
 
 ## Next Session Should
-- **Start with English version** — substantial translation work. Voice is tricky ("Bora!" doesn't translate literally); use energetic-but-warm English tone. Share CSS/JS/images from root; use relative path `../` from `/en/`. Add `<link rel="alternate" hreflang="pt-BR">` / `<link rel="alternate" hreflang="en">` in both files. Update sitemap.xml.
-- Drop Meta Pixel ID in head + fire `Contact`/`Lead` events on WhatsApp click
-- Build UTM link for influencer post before she posts
-- Verify GA4 real-time shows events after deploy propagates
+- **Decide MCP scope**: free-only (Fase 1) vs full stack (Fases 1+2+3 incl. ads)
+- If proceeding: install `surendranb/google-analytics-mcp`, set up GCP service account, grant Viewer on GA4 property `G-0MT8F76G0W`
+- Verify Search Console ownership of `valeriaschumann.com.br`
+- Consider Google Business Profile (no MCP, but #1 channel for local nutritionist)
+- Update sitemap.xml to include `/en/` URL
 
 ---
+
+### Session 4 (2026-04-26)
+**Focus**: English version of site (i18n) + marketing MCP research
+**Completed**:
+- [x] `/en/index.html` — full English translation, idiomatic not literal, preserving Val's casual tone (cat mom, no food shaming, etc.)
+- [x] Hreflang alternates added to both PT and EN pages (pt-BR, en, x-default)
+- [x] Language switcher pill (PT|EN) added to navbar — `~20 lines CSS in components.css`, `aria-current="page"` marks active
+- [x] EN metadata: title, description, og:locale=en_US, og:locale:alternate=pt_BR, JSON-LD with `inLanguage: en` + English description
+- [x] All 4 WhatsApp data-whatsapp messages translated to English ("Hi, Val!" variants)
+- [x] `js/main.js` DEFAULT_MESSAGE now lang-aware (reads `document.documentElement.lang`) — falls back to PT, switches to EN if lang starts with "en"
+- [x] Marquee strip translated (real food, no food shaming, let's do this, so good, etc.)
+- [x] Localization: "Caxias do Sul, Brazil" everywhere in EN (was just city)
+- [x] 8 quality tweaks after first pass (e.g., "Shall we get started?" → "Ready to get started?", "highly accurate" → "super accurate")
+- [x] Local server verification on port 8766 — both pages 200, all assets reachable
+- [x] Pushed to `main` (`22d7452`), GitHub Pages auto-deploys
+- [x] Marketing MCP research — found GA4, Google Ads, Search Console, Meta Ads MCPs
+- [x] Plan written for phased MCP rollout
+**Blockers**:
+- Awaiting user decision on MCP scope (free-only vs full stack with ads)
+- Context hit 81% mid-planning — session ended before MCP install
+**Decisions**:
+- **i18n approach**: duplicated HTML at `/en/index.html` (subdirectory) instead of JS-based i18n. Reasoning: static site, no build, hreflang SEO native, zero-JS switcher
+- **Asset paths in /en/**: absolute (`/assets/`, `/css/`, `/js/`) so they resolve from root regardless of depth
+- **Switcher placement**: in `.navbar__inner` (visible on desktop AND mobile, not hidden behind hamburger) — better UX for multi-language signaling
+- **Marquee translated** (not kept in PT) — user choice for consistency over local flavor
+- **WhatsApp default**: lang-aware in JS via `document.documentElement.lang` instead of duplicating main.js or hardcoding per page
+- **MCP stack philosophy**: read-only/free MCPs first (GA4, Search Console), then keyword research, then paid ads — don't spend without baseline data
+**Commits**: 22d7452 (feat: versão em inglês do site /en/ com switcher PT|EN)
+**Next**: User answers scope question → install GA4 MCP first
 
 ### Session 3 (2026-04-17)
 **Focus**: Atendimento online em destaque (pre-influencer campaign), CRN/Insta fixes, GA4 install
