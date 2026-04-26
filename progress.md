@@ -1,25 +1,51 @@
 # Nutri-Val — Progress
 
 ## Current Status
-**Phase**: Live PT+EN, exploring marketing MCP stack for client acquisition
+**Phase**: Growth marketing layer instalado (read-first via APIs oficiais Google + curl + gcloud, sem MCPs)
 **Last Updated**: 2026-04-26
 **Live URL**: https://valeriaschumann.com.br (PT) + https://valeriaschumann.com.br/en/ (EN)
 
 ## In Progress
-- [ ] **Marketing MCP stack planning** — plan written at `~/.claude/plans/gostaria-que-o-site-spicy-taco.md`. Phased approach: GA4 + Search Console (free, read) → keyword research → Google Ads + Meta Ads (paid). Awaiting user decision on scope.
+- [ ] **Setup gcloud + APIs** (user-side, manual): `gcloud auth application-default login`, `gcloud services enable analyticsdata.googleapis.com searchconsole.googleapis.com`, copiar `scripts/api/.env.example` → `scripts/api/.env` e preencher `GA4_PROPERTY_ID` (numeric, do GA4 Admin)
+- [ ] Validar com query teste: `bash scripts/api/ga-query.sh '{"dateRanges":[{"startDate":"yesterday","endDate":"yesterday"}],"metrics":[{"name":"activeUsers"}]}'`
+- [ ] Rodar `/analise-pico` na data em que a influencer postou — primeiro teste real do caso de uso
 - [ ] Meta Pixel install (still pending — Val to send Pixel ID)
 - [ ] Domain verification in Meta Business
 - [ ] LGPD cookie notice
 - [ ] sitemap.xml update to include `/en/`
 
 ## Next Session Should
-- **Decide MCP scope**: free-only (Fase 1) vs full stack (Fases 1+2+3 incl. ads)
-- If proceeding: install `surendranb/google-analytics-mcp`, set up GCP service account, grant Viewer on GA4 property `G-0MT8F76G0W`
-- Verify Search Console ownership of `valeriaschumann.com.br`
+- Completar pré-requisitos gcloud (login + enable APIs + .env)
+- Rodar primeiro `/relatorio-semanal` pra ter baseline numérico
+- Rodar `/analise-pico` no dia da influencer pra validar caso de uso original
+- Rodar `/oportunidade-seo` pra ver se já tem queries em pos 5-15 (depende de quanta busca o site recebe — talvez precise esperar mais 30 dias se site novo)
+- Quando Val decidir investir em mídia paga: solicitar Developer Token Google Ads API (1-2 dias úteis), instalar Meta Pixel
 - Consider Google Business Profile (no MCP, but #1 channel for local nutritionist)
 - Update sitemap.xml to include `/en/` URL
 
 ---
+
+### Session 5 (2026-04-26)
+**Focus**: Growth marketing layer (estilo Anthropic PDF "How Anthropic teams use Claude Code", p.15-16)
+**Completed**:
+- [x] Plano detalhado em `~/.claude/plans/https-www-cdn-anthropic-com-58284b19e702-prancy-wadler.md` (substitui o plano anterior `gostaria-que-o-site-spicy-taco.md`)
+- [x] `.gitignore` refinado: `.claude/` → `.claude/settings.local.json` (permite versionar agents/skills)
+- [x] Helpers `scripts/api/ga-query.sh` + `sc-query.sh` + `.env.example` + `README.md` (curl + gcloud, oficial Google, sem dep terceira)
+- [x] Sub-agents `.claude/agents/headline-agent.md` (≤30 chars) + `description-agent.md` (≤90 chars) com leitura de memória
+- [x] Skills `.claude/skills/{relatorio-semanal,oportunidade-seo,analise-pico,nova-campanha}/SKILL.md`
+- [x] Pasta `marketing/` com `README.md`, `ad-experiments.md` (memória append-only), `weekly-reports/.gitkeep`, `campaign-drafts/.gitkeep`
+- [x] `CLAUDE.md` na raiz (contexto pra futuras sessões)
+- [x] Esta sessão atualizada em `progress.md`
+**Blockers**:
+- Pré-requisitos manuais user-side: `gcloud auth application-default login`, enable APIs, preencher `GA4_PROPERTY_ID` em `scripts/api/.env`
+- Numeric Property ID precisa ser pego no GA4 Admin → Property Settings (não é o measurement `G-0MT8F76G0W`)
+**Decisões**:
+- **Sem MCPs comunidade**. Decidido após user questionar legitimidade de `surendranb/google-analytics-mcp`. Foi pra abordagem oficial: APIs Google direto via `curl` + `gcloud auth application-default` (auth pessoal, sem service account). SKILLs viram a camada de abstração. Alinhado com playbook Anthropic ("eles construíram o Meta Ads MCP deles" — não usam pacotes comunidade).
+- **Auth pessoal vs service account**: pessoal escolhido por ser uso interativo, zero burocracia.
+- **Sub-agents headline + description com memória**: incluído **agora** mesmo sem Google Ads API ainda — `/nova-campanha` gera draft em markdown que Val pode subir manualmente; quando integrarmos Google Ads API, mesma skill pode push automático.
+- **Project-scope vs user-scope**: tudo em `.claude/` do repo, versionado. Settings privadas (`settings.local.json`) e env (`.env`) gitignorados.
+**Commits**: pendente (próximo passo)
+**Next**: user roda os pré-requisitos gcloud + primeira validação com `/analise-pico`
 
 ### Session 4 (2026-04-26)
 **Focus**: English version of site (i18n) + marketing MCP research
