@@ -4,7 +4,7 @@ Site da Valéria Schumann, nutricionista em Caxias do Sul (RS). Estático (HTML/
 
 ## Conversão = clique no WhatsApp
 
-Número: `+55 54 99606-0202` (`5554996060202` no link `wa.me`).
+Número: `+55 54 99934-5681` (`5554999345681` no link `wa.me`).
 Evento GA4: `outbound_click` com dimensões `destination`, `link_url`, `link_text`, `link_location`. Disparado em `js/main.js:352-379` pra qualquer link de WhatsApp ou Instagram.
 
 ## Analytics

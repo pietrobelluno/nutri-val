@@ -2,7 +2,7 @@
    WHATSAPP — Pre-filled links + Floating button
    ============================================ */
 
-const WHATSAPP_NUMBER = '5554996060202';
+const WHATSAPP_NUMBER = '5554999345681';
 const DEFAULT_MESSAGE = 'Olá, Val! Gostaria de agendar uma consulta.';
 
 function buildWhatsAppURL(message) {

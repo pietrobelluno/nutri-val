@@ -6,7 +6,7 @@
   'use strict';
 
   /* ---- CONFIG ---- */
-  var WHATSAPP_NUMBER = '5554996060202';
+  var WHATSAPP_NUMBER = '5554999345681';
   var _docLang = (document.documentElement.lang || '').toLowerCase();
   var DEFAULT_MESSAGE = _docLang.indexOf('en') === 0
     ? "Hi, Val! I'd like to book a consultation."
