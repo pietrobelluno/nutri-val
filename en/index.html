@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Valéria Schumann — Nutritionist based in Caxias do Sul, Brazil. Personalized nutrition coaching with no crazy restrictions — just science and real food.">
+  <meta name="description" content="Nutritionist in Caxias do Sul, Brazil, and online worldwide. Personalized nutrition coaching with no restrictive diets, just science and real food. Book on WhatsApp.">
   <meta name="theme-color" content="#fffdf5">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Valéria Schumann">
@@ -15,22 +15,25 @@
   <link rel="alternate" hreflang="x-default" href="https://valeriaschumann.com.br/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Valéria Schumann — Nutritionist">
-  <meta property="og:description" content="Personalized nutrition coaching in Caxias do Sul, Brazil. Science + real food.">
+  <meta property="og:title" content="Valéria Schumann | Nutritionist in Caxias do Sul, Brazil">
+  <meta property="og:description" content="Personalized nutrition coaching, in person in Caxias do Sul or online worldwide. Science + real food.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://valeriaschumann.com.br/en/">
-  <meta property="og:image" content="https://valeriaschumann.com.br/assets/images/anthropometric-calipers.png">
+  <meta property="og:image" content="https://valeriaschumann.com.br/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Valéria Schumann, nutritionist in Caxias do Sul, Brazil">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pt_BR">
-  <meta property="og:site_name" content="Valéria Schumann — Nutritionist">
+  <meta property="og:site_name" content="Valéria Schumann | Nutritionist">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Valéria Schumann — Nutritionist">
-  <meta name="twitter:description" content="Personalized nutrition coaching in Caxias do Sul, Brazil. Science + real food.">
-  <meta name="twitter:image" content="https://valeriaschumann.com.br/assets/images/anthropometric-calipers.png">
+  <meta name="twitter:title" content="Valéria Schumann | Nutritionist in Caxias do Sul, Brazil">
+  <meta name="twitter:description" content="Personalized nutrition coaching, in person in Caxias do Sul or online worldwide. Science + real food.">
+  <meta name="twitter:image" content="https://valeriaschumann.com.br/assets/images/og-cover.png">
 
-  <title>Valéria Schumann — Nutritionist in Caxias do Sul, Brazil</title>
+  <title>Valéria Schumann | Nutritionist in Caxias do Sul, Brazil</title>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MT8F76G0W"></script>
@@ -41,50 +44,143 @@
     gtag('config', 'G-0MT8F76G0W');
   </script>
 
-  <!-- Structured Data — Local Business -->
+  <!-- Structured Data — Local Business + Person (same @ids as the PT page) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HealthBusiness",
-    "name": "Valéria Schumann — Nutritionist",
-    "url": "https://valeriaschumann.com.br/en/",
-    "inLanguage": "en",
-    "logo": "https://valeriaschumann.com.br/apple-touch-icon.png",
-    "image": "https://valeriaschumann.com.br/assets/images/anthropometric-calipers.png",
-    "description": "Personalized nutrition coaching in Caxias do Sul, Brazil. Science + real food.",
-    "telephone": "+55-54-99934-5681",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Caxias do Sul",
-      "addressRegion": "RS",
-      "addressCountry": "BR"
+    "@graph": [
+      {
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "@id": "https://valeriaschumann.com.br/#business",
+        "name": "Valéria Schumann | Nutritionist",
+        "url": "https://valeriaschumann.com.br/en/",
+        "inLanguage": "en",
+        "logo": "https://valeriaschumann.com.br/apple-touch-icon.png",
+        "image": "https://valeriaschumann.com.br/assets/images/og-cover.png",
+        "description": "Nutritionist in Caxias do Sul, Brazil. Personalized nutrition coaching, in person or online, with no restrictive diets.",
+        "medicalSpecialty": "DietNutrition",
+        "telephone": "+55-54-99934-5681",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Ângelo Chiarello, 2811, sala 1303, Centro Empresarial Recreio Cruzeiro",
+          "addressLocality": "Caxias do Sul",
+          "addressRegion": "RS",
+          "postalCode": "95032-460",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Caxias do Sul" },
+          { "@type": "AdministrativeArea", "name": "Serra Gaúcha" },
+          { "@type": "Place", "name": "Worldwide (online)" }
+        ],
+        "availableService": [
+          { "@type": "MedicalTherapy", "name": "In-person nutrition consultation" },
+          { "@type": "MedicalTherapy", "name": "Online nutrition consultation" },
+          { "@type": "MedicalTest", "name": "Anthropometric assessment and bioimpedance" }
+        ],
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.instagram.com/valeria_schumann/"
+        ],
+        "founder": { "@id": "https://valeriaschumann.com.br/#valeria" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://valeriaschumann.com.br/#valeria",
+        "name": "Valéria Schumann",
+        "jobTitle": "Nutritionist",
+        "identifier": "CRN2 12907P",
+        "worksFor": { "@id": "https://valeriaschumann.com.br/#business" },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade de Caxias do Sul (UCS)"
+        },
+        "sameAs": [
+          "https://www.instagram.com/valeria_schumann/"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data — FAQ (mirrors the #duvidas section) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a consultation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The price is the same in person or online. What changes it is whether you book a single consultation or a follow-up package. Message me on WhatsApp and I’ll send you prices and payment options, no strings attached."
+      }
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -29.1685,
-      "longitude": -51.1794
+    {
+      "@type": "Question",
+      "name": "Where is the office?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rua Ângelo Chiarello, 2811, room 1303 (Centro Empresarial Recreio Cruzeiro), in the Pio X neighborhood of Caxias do Sul, Brazil. I also see patients online."
+      }
     },
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
+    {
+      "@type": "Question",
+      "name": "How do online consultations work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We meet over Google Meet: I send you the link at the scheduled time, nothing to install. It’s the same consultation as in person, and your personalized meal plan arrives within 3 business days."
+      }
     },
-    "sameAs": [
-      "https://www.instagram.com/valeria_schumann/"
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "Valéria Schumann",
-      "jobTitle": "Nutritionist",
-      "identifier": "CRN2 12907P",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Universidade de Caxias do Sul (UCS)"
+    {
+      "@type": "Question",
+      "name": "How long is a consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first consultation takes up to 2 hours, because I want to understand your routine, history and goals without rushing. Follow-ups take about 45 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to bring lab tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have recent blood work, bring it (or send it beforehand) and I’ll review it. If not, that’s fine: we’ll decide together whether any test is worth ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I have to cut out everything I love?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! There’s no forbidden-foods list and no restrictive diet here. Your plan is built around your routine and the food you enjoy, so it’s something you can actually keep up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you see patients outside Caxias do Sul?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! People from around the Serra Gaúcha region can come to the office, and anyone anywhere in Brazil or abroad can do the whole follow-up online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Just message me on WhatsApp: +55 54 99934-5681. I’ll answer your questions there and we’ll find the best time."
       }
     }
-  }
+  ]
+}
   </script>
 
   <!-- Favicon — all platforms -->
@@ -95,7 +191,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="/assets/images/hero-labcoat.png">
+  <link rel="preload" as="image" type="image/webp" href="/assets/images/hero-labcoat.webp" imagesrcset="/assets/images/hero-labcoat-400.webp 400w, /assets/images/hero-labcoat.webp 800w" imagesizes="(max-width: 767px) 200px, 480px">
 
   <!-- Google Fonts: DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,7 +228,9 @@
         <a href="#sobre">About</a>
         <a href="#consultas">Consultations</a>
         <a href="#avaliacao">Assessment</a>
+        <a href="#duvidas">FAQ</a>
         <a href="#contato">Contact</a>
+        <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20consultation." class="navbar__cta" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book a consultation." data-location="navbar" target="_blank" rel="noopener noreferrer">Book</a>
       </div>
 
       <div class="lang-switch" role="group" aria-label="Idioma / Language">
@@ -152,7 +250,9 @@
       <a href="#sobre">About</a>
       <a href="#consultas">Consultations</a>
       <a href="#avaliacao">Assessment</a>
+      <a href="#duvidas">FAQ</a>
       <a href="#contato">Contact</a>
+      <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20consultation." class="btn btn--whatsapp navbar__overlay-cta" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book a consultation." data-location="mobile_menu" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
     </div>
   </nav>
 
@@ -178,11 +278,11 @@
     <div class="container">
       <div class="hero__grid">
         <div class="hero__text">
-          <h1 class="text-hero hero__headline">If you&rsquo;ve made it here, you&rsquo;ve already taken the first &mdash; and maybe the bravest &mdash; step.</h1>
+          <h1 class="text-hero hero__headline"><span class="hero__eyebrow">Valéria Schumann · Nutritionist in Caxias do Sul, Brazil</span>If you&rsquo;ve made it here, you&rsquo;ve already taken the first (and maybe the bravest) step.</h1>
           <p class="hero__subtitle">Real nutrition coaching: no magic formulas, no food shaming. Just science, warmth, and a plan that fits your life.</p>
           <div class="hero__cta">
-            <a href="#" class="btn btn--primary" data-whatsapp="Hi, Val! I'd like to book a consultation.">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20consultation." class="btn btn--whatsapp" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book a consultation." data-location="hero" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Book a consultation
             </a>
           </div>
@@ -192,7 +292,7 @@
           </p>
         </div>
         <div class="hero__illus">
-          <img src="/assets/images/hero-labcoat.png" alt="Valéria celebrating in her lab coat with broccoli and carrots in her pockets" width="460" height="680">
+          <picture><source type="image/webp" srcset="/assets/images/hero-labcoat-400.webp 400w, /assets/images/hero-labcoat.webp 800w" sizes="(max-width: 767px) 200px, 480px"><img fetchpriority="high" src="/assets/images/hero-labcoat.png" alt="Valéria celebrating in her lab coat with broccoli and carrots in her pockets" width="460" height="680"></picture>
         </div>
       </div>
 
@@ -216,15 +316,15 @@
       <div class="about__grid">
         <div class="about__illus-wrap reveal-left">
           <span class="about__speech-bubble" aria-hidden="true">Let&rsquo;s go! &#10024;</span>
-          <img class="about__illus-main" src="/assets/images/about-cats.png" alt="Valéria sitting with her three cats" loading="lazy" width="460" height="700">
+          <picture><source type="image/webp" srcset="/assets/images/about-cats.webp"><img class="about__illus-main" src="/assets/images/about-cats.png" alt="Valéria sitting with her three cats" loading="lazy" width="460" height="700"></picture>
         </div>
         <div class="about__text reveal-right stagger">
-          <h2 class="h1 mb-md">Nice to meet you &mdash; I&rsquo;m Valéria Schumann!</h2>
+          <h2 class="h1 mb-md">Nice to meet you, I&rsquo;m Valéria Schumann!</h2>
           <p>Nutritionist trained at UCS, passionate about <span class="highlight">real food</span> and about proving that eating well doesn&rsquo;t have to be boring, sad, or joyless.</p>
-          <p>I believe food can be beautiful, delicious, and nutritious all at once &mdash; and that no one should have to give up the <span class="highlight">joy of eating</span> to take care of their health.</p>
-          <p>My job is to translate nutrition science into something that actually fits your routine &mdash; no food shaming, no stress, no endless lists of &ldquo;forbidden&rdquo; foods. Here, we eat, we live, and we grow together.</p>
+          <p>I believe food can be beautiful, delicious, and nutritious all at once, and that no one should have to give up the <span class="highlight">joy of eating</span> to take care of their health.</p>
+          <p>My job is to translate nutrition science into something that actually fits your routine: no food shaming, no stress, no endless lists of &ldquo;forbidden&rdquo; foods. Here, we eat, we live, and we grow together.</p>
           <div class="about__cat-callout">
-            <img class="about__cat-callout-icon" src="/assets/images/cat-quote.png" alt="" aria-hidden="true" width="40" height="40" loading="lazy">
+            <picture><source type="image/webp" srcset="/assets/images/cat-quote.webp"><img class="about__cat-callout-icon" src="/assets/images/cat-quote.png" alt="" aria-hidden="true" width="40" height="40" loading="lazy"></picture>
             <p>And yes, I&rsquo;m a cat mom. Three of them, actually. They don&rsquo;t weigh in on meal plans, but they offer solid moral support.</p>
           </div>
         </div>
@@ -252,7 +352,7 @@
 
       <div class="cards-section__grid">
         <!-- Decorative shrug illustration -->
-        <img class="cards-section__shrug" src="/assets/images/welcome-shrug.png" alt="" aria-hidden="true" loading="lazy" width="200" height="340">
+        <picture><source type="image/webp" srcset="/assets/images/welcome-shrug.webp"><img class="cards-section__shrug" src="/assets/images/welcome-shrug.png" alt="" aria-hidden="true" loading="lazy" width="200" height="340"></picture>
 
         <!-- Yes card -->
         <div class="menu-card menu-card--yes reveal-left">
@@ -320,7 +420,7 @@
           </div>
 
           <p class="text-lg mb-md">The first consultation goes deep: I want to truly understand who you are, how you eat, how you live, what you feel, what you want to change.</p>
-          <p class="mb-md">This isn&rsquo;t a generic 20-minute appointment with a printed diet. It&rsquo;s a real conversation &mdash; with listening, with science, and with a meal plan that&rsquo;s 100% personalized.</p>
+          <p class="mb-md">This isn&rsquo;t a generic 20-minute appointment with a printed diet. It&rsquo;s a real conversation, with listening, science, and a meal plan that&rsquo;s 100% personalized.</p>
 
           <div class="flex flex-gap-sm flex-wrap stagger">
             <span class="badge badge--dark">Personalized meal plan</span>
@@ -329,10 +429,13 @@
               Delivered within 3 business days
             </span>
           </div>
+
+          <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20my%20first%20consultation." class="inline-cta" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book my first consultation." data-location="consultas" target="_blank" rel="noopener noreferrer">Book my first consultation
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
 
         <div class="consultation__illus reveal-scale">
-          <img src="/assets/images/consultation-laptop.png" alt="Valéria at her laptop preparing your meal plan" loading="lazy" width="460" height="660">
+          <picture><source type="image/webp" srcset="/assets/images/consultation-laptop.webp"><img src="/assets/images/consultation-laptop.png" alt="Valéria at her laptop preparing your meal plan" loading="lazy" width="460" height="660"></picture>
         </div>
       </div>
     </div>
@@ -340,7 +443,7 @@
 
 
   <!-- ====== ONLINE CALLOUT ====== -->
-  <aside class="online-callout" aria-labelledby="online-callout-title">
+  <aside class="online-callout" id="online" aria-labelledby="online-callout-title">
     <div class="container">
       <div class="online-callout__card reveal-up">
         <div class="online-callout__header">
@@ -349,7 +452,7 @@
             Online consultations
           </span>
           <h3 id="online-callout-title" class="online-callout__title">Live far away? <span class="highlight">No problem.</span></h3>
-          <p class="online-callout__lede">I see clients online from anywhere in the world &mdash; the same consultation, the same plan, and the same dedication as in person.</p>
+          <p class="online-callout__lede">I see clients online from anywhere in the world: the same consultation, the same plan, and the same dedication as in person.</p>
         </div>
         <ul class="online-callout__list stagger">
           <li class="online-callout__item">
@@ -358,7 +461,7 @@
             </span>
             <div class="online-callout__item-text">
               <strong>Video call on Google Meet</strong>
-              <p>I&rsquo;ll send the link at our scheduled time. Just click &mdash; no app, no install.</p>
+              <p>I&rsquo;ll send the link at our scheduled time. Just click, no app or install needed.</p>
             </div>
           </li>
           <li class="online-callout__item">
@@ -367,7 +470,7 @@
             </span>
             <div class="online-callout__item-text">
               <strong>Same plan, same dedication</strong>
-              <p>Full assessment, personalized meal plan, and follow-ups &mdash; no &ldquo;lite&rdquo; version for online clients.</p>
+              <p>Full assessment, personalized meal plan, and follow-ups. No &ldquo;lite&rdquo; version for online clients.</p>
             </div>
           </li>
           <li class="online-callout__item">
@@ -376,11 +479,11 @@
             </span>
             <div class="online-callout__item-text">
               <strong>AI-powered body assessment</strong>
-              <p>Scientifically validated, with the same precision as in person &mdash; no need to leave home. <strong class="online-callout__emphasis">100% safe.</strong></p>
+              <p>Body composition estimated with a scientifically validated method, without leaving home.</p>
             </div>
           </li>
         </ul>
-        <a href="#" class="online-callout__cta" data-whatsapp="Hi, Val! I'd like to know more about online consultations.">
+        <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20online%20consultations." class="online-callout__cta" data-whatsapp="Hi, Val! I found your website and I&#39;d like to know more about online consultations." data-location="online" target="_blank" rel="noopener noreferrer">
           Book an online session
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -399,7 +502,7 @@
     <div class="container">
       <div class="returns__grid">
         <div class="returns__illus reveal-left">
-          <img src="/assets/images/active-running.png" alt="Valéria running with sunglasses" loading="lazy" width="400" height="580">
+          <picture><source type="image/webp" srcset="/assets/images/active-running.webp"><img src="/assets/images/active-running.png" alt="Valéria running with sunglasses" loading="lazy" width="400" height="580"></picture>
         </div>
 
         <div class="reveal-right">
@@ -422,7 +525,7 @@
           </div>
 
           <p class="text-lg mb-md">Follow-ups are where the magic happens: we review, we adjust, we celebrate every win, and we work through what didn&rsquo;t click.</p>
-          <p class="mb-md">Includes progress tracking, body composition assessment, and meal plan adjustments. Every session is unique because you change &mdash; and the plan changes with you.</p>
+          <p class="mb-md">Includes progress tracking, body composition assessment, and meal plan adjustments. Every session is unique because you change, and the plan changes with you.</p>
         </div>
       </div>
     </div>
@@ -457,7 +560,7 @@
     <div class="container">
       <div class="assessment__header reveal-up">
         <div class="assessment__illus">
-          <img src="/assets/images/anthropometric-calipers.png" alt="Valéria holding a skinfold caliper" loading="lazy" width="180" height="225">
+          <picture><source type="image/webp" srcset="/assets/images/anthropometric-calipers.webp"><img src="/assets/images/anthropometric-calipers.png" alt="Valéria holding a skinfold caliper" loading="lazy" width="180" height="225"></picture>
         </div>
         <div>
           <span class="assessment__label">Assessment</span>
@@ -470,7 +573,7 @@
           <span class="assessment-card__num">01</span>
           <div class="assessment-card__icon" aria-hidden="true">&#9889;</div>
           <h3 class="assessment-card__title">Bioelectrical Impedance</h3>
-          <p>A complete look at body composition: lean mass, fat, body water, and basal metabolic rate. Fast, painless, and super accurate.</p>
+          <p>A complete look at body composition: lean mass, fat, body water, and basal metabolic rate. Fast and painless.</p>
         </div>
 
         <div class="assessment-card assessment-card--peach reveal-up">
@@ -484,20 +587,143 @@
           <span class="assessment-card__num">03</span>
           <div class="assessment-card__icon" aria-hidden="true">&#129302;</div>
           <h3 class="assessment-card__title">Artificial Intelligence</h3>
-          <p>Cutting-edge tech that cross-references data from multiple assessments to paint a complete, personalized picture of your progress.</p>
+          <p>Technology that cross-references data from multiple assessments to paint a complete, personalized picture of your progress.</p>
         </div>
       </div>
 
       <div class="assessment__footer reveal-up">
-        <img class="assessment__cat" src="/assets/images/assessment-cat.png" alt="Black cat lying down, relaxed" loading="lazy" width="200" height="160">
-        <p class="assessment__footer-text">You can relax about the results &mdash; we look at everything without judgment. Here, no number defines who you are.</p>
+        <picture><source type="image/webp" srcset="/assets/images/assessment-cat.webp"><img class="assessment__cat" src="/assets/images/assessment-cat.png" alt="Black cat lying down, relaxed" loading="lazy" width="200" height="160"></picture>
+        <p class="assessment__footer-text">You can relax about the results: we look at everything without judgment. Here, no number defines who you are.</p>
+      </div>
+
+      <div class="text-center">
+        <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20body%20composition%20assessment." class="inline-cta" data-whatsapp="Hi, Val! I found your website and I&#39;d like to know more about the body composition assessment." data-location="avaliacao" target="_blank" rel="noopener noreferrer">Book my assessment
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </section>
 
 
+  <!-- ====== TESTIMONIALS ======
+       Ready to enable: uncomment once Val sends 3-5 testimonials with written permission (mirror of the PT section).
+  <section class="testimonials section" id="depoimentos">
+    <div class="container">
+      <div class="text-center reveal-up" style="margin-bottom:var(--space-xl)">
+        <span class="section-tag">&#128172; Kind words</span>
+        <h2 class="h1">What <span class="highlight">my patients</span> say</h2>
+      </div>
+      <div class="testimonials__grid stagger">
+        <figure class="testimonial-card">
+          <blockquote>"Testimonial text here."</blockquote>
+          <figcaption>Name, city</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>"Testimonial text here."</blockquote>
+          <figcaption>Name, city</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>"Testimonial text here."</blockquote>
+          <figcaption>Name, city</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  -->
+
   <!-- Organic wave transition -->
-  <div class="wave-divider wave-divider--assess-cta" aria-hidden="true">
+  <div class="wave-divider wave-divider--assess-faq" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C240,55 480,5 720,30 C960,55 1200,10 1440,25 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- ====== FAQ ====== -->
+  <section class="faq section" id="duvidas">
+    <div class="container">
+      <div class="text-center reveal-up" style="margin-bottom:var(--space-xl)">
+        <span class="section-tag">&#129300; Before you book</span>
+        <h2 class="h1">Frequently asked <span class="highlight">questions</span></h2>
+      </div>
+
+      <div class="faq__list reveal-up">
+        <details class="faq-item">
+          <summary class="faq-item__q">How much does a consultation cost?</summary>
+          <p class="faq-item__a">The price is the same in person or online. What changes it is whether you book a single consultation or a follow-up package. Message me on WhatsApp and I&rsquo;ll send you prices and payment options, no strings attached.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Where is the office?</summary>
+          <p class="faq-item__a">Rua Ângelo Chiarello, 2811, room 1303 (Centro Empresarial Recreio Cruzeiro), in the Pio X neighborhood of Caxias do Sul, Brazil. I also see patients online.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">How do online consultations work?</summary>
+          <p class="faq-item__a">We meet over Google Meet: I send you the link at the scheduled time, nothing to install. It&rsquo;s the same consultation as in person, and your personalized meal plan arrives within 3 business days.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">How long is a consultation?</summary>
+          <p class="faq-item__a">The first consultation takes up to 2 hours, because I want to understand your routine, history and goals without rushing. Follow-ups take about 45 minutes.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Do I need to bring lab tests?</summary>
+          <p class="faq-item__a">If you have recent blood work, bring it (or send it beforehand) and I&rsquo;ll review it. If not, that&rsquo;s fine: we&rsquo;ll decide together whether any test is worth ordering.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Will I have to cut out everything I love?</summary>
+          <p class="faq-item__a">No! There&rsquo;s no forbidden-foods list and no restrictive diet here. Your plan is built around your routine and the food you enjoy, so it&rsquo;s something you can actually keep up.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Do you see patients outside Caxias do Sul?</summary>
+          <p class="faq-item__a">Yes! People from around the Serra Gaúcha region can come to the office, and anyone anywhere in Brazil or abroad can do the whole follow-up online.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">How do I book?</summary>
+          <p class="faq-item__a">Just message me on WhatsApp: +55 54 99934-5681. I&rsquo;ll answer your questions there and we&rsquo;ll find the best time.</p>
+        </details>
+      </div>
+
+      <p class="faq__more reveal-up">Still have a question? <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%20have%20a%20question." class="faq__more-link" data-whatsapp="Hi, Val! I found your website and I have a question." data-location="faq" target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--faq-local" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,35 C180,10 360,50 540,25 C720,0 900,45 1080,20 C1260,0 1380,30 1440,20 L1440,60 L0,60 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- ====== LOCATION ====== -->
+  <section class="location section" id="local">
+    <div class="container">
+      <div class="location__grid">
+        <div class="location__text reveal-left">
+          <span class="section-tag">&#128205; Where to find me</span>
+          <h2 class="h1 mb-md">Office in <span class="highlight">Caxias do Sul</span></h2>
+          <p class="text-lg mb-md">I see patients at Centro Empresarial Recreio Cruzeiro, in the Pio X neighborhood. Living elsewhere in the Serra Gaúcha? Come by the office or do everything online.</p>
+
+          <address class="location__address">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>
+              <strong>Rua Ângelo Chiarello, 2811, room 1303</strong><br>
+              Centro Empresarial Recreio Cruzeiro &middot; Pio X<br>
+              Caxias do Sul &middot; RS &middot; Brazil &middot; 95032-460
+            </span>
+          </address>
+
+          <div class="location__actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+%C3%82ngelo+Chiarello%2C+2811%2C+Caxias+do+Sul+-+RS%2C+95032-460" class="btn btn--primary" data-location="local" target="_blank" rel="noopener noreferrer">Get directions</a>
+            <a href="https://share.google/EagTBlY8DtBkT9eXs" class="btn btn--outline" data-location="local" target="_blank" rel="noopener noreferrer">View on Google</a>
+          </div>
+        </div>
+
+        <div class="location__map reveal-right">
+          <iframe src="https://maps.google.com/maps?q=Rua+%C3%82ngelo+Chiarello%2C+2811%2C+Caxias+do+Sul+-+RS%2C+95032-460&amp;z=16&amp;output=embed" title="Map of Valéria Schumann&rsquo;s office in Caxias do Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organic wave transition -->
+  <div class="wave-divider wave-divider--local-cta" aria-hidden="true">
     <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
       <path d="M0,30 C360,55 720,5 1080,35 C1260,45 1380,15 1440,25 L1440,60 L0,60 Z" fill="currentColor"/>
     </svg>
@@ -514,14 +740,14 @@
       <div class="cta__content">
         <span class="section-tag reveal-up">&#10024; Time to act</span>
         <h2 class="h1 cta__headline reveal-up">Ready to <span class="highlight">get started</span>?</h2>
-        <p class="cta__subtitle reveal-up">Your health deserves real attention &mdash; and it&rsquo;s just one consultation (in person or online) away.</p>
+        <p class="cta__subtitle reveal-up">Your health deserves real attention, and it&rsquo;s just one consultation (in person or online) away.</p>
 
         <div class="cta__buttons reveal-scale">
-          <a href="#" class="btn btn--whatsapp" data-whatsapp="Hi, Val! I'd like to book a consultation.">
+          <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20consultation." class="btn btn--whatsapp" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book a consultation." data-location="contato" target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Book on WhatsApp
           </a>
-          <a href="https://www.instagram.com/valeria_schumann/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          <a href="https://www.instagram.com/valeria_schumann/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" data-location="contato">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             Follow me on Insta
           </a>
@@ -530,8 +756,8 @@
         <p class="cta__ps reveal-up">P.S.: You deserve to feel good in your body. &#128155;</p>
       </div>
 
-      <img class="cta__illus cta__illus--right reveal-rotate" src="/assets/images/strength-squat.png" alt="Valéria doing a barbell squat" loading="lazy" width="300" height="320">
-      <img class="cta__illus cta__illus--left reveal-rotate" src="/assets/images/fitness-dumbbell.png" alt="Valéria lifting a dumbbell" loading="lazy" width="300" height="400">
+      <picture><source type="image/webp" srcset="/assets/images/strength-squat.webp"><img class="cta__illus cta__illus--right reveal-rotate" src="/assets/images/strength-squat.png" alt="Valéria doing a barbell squat" loading="lazy" width="300" height="320"></picture>
+      <picture><source type="image/webp" srcset="/assets/images/fitness-dumbbell.webp"><img class="cta__illus cta__illus--left reveal-rotate" src="/assets/images/fitness-dumbbell.png" alt="Valéria lifting a dumbbell" loading="lazy" width="300" height="400"></picture>
     </div>
   </section>
 
@@ -553,12 +779,13 @@
       <div class="footer__logo">Valéria Schumann</div>
       <p class="footer__role">Nutritionist &middot; CRN2 12907P &middot; UCS</p>
       <p class="footer__tagline">Made with love, science, and real food</p>
+      <p class="footer__nap">Rua Ângelo Chiarello, 2811, room 1303 &middot; Pio X &middot; Caxias do Sul/RS, Brazil &middot; <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website." data-whatsapp="Hi, Val! I found your website." data-location="footer" target="_blank" rel="noopener noreferrer">+55 54 99934-5681</a></p>
 
       <div class="footer__socials">
-        <a href="#" data-whatsapp="Hi, Val!" aria-label="WhatsApp">
+        <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website." data-whatsapp="Hi, Val! I found your website." data-location="footer" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
-        <a href="https://www.instagram.com/valeria_schumann/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/valeria_schumann/" target="_blank" rel="noopener noreferrer" data-location="footer" aria-label="Instagram">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
       </div>
@@ -574,7 +801,7 @@
 
 
   <!-- ====== FLOATING WHATSAPP ====== -->
-  <a href="#" class="whatsapp-float" aria-label="Book on WhatsApp">
+  <a href="https://wa.me/5554999345681?text=Hi%2C%20Val%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20consultation." class="whatsapp-float" data-whatsapp="Hi, Val! I found your website and I&#39;d like to book a consultation." data-location="floating" aria-label="Book on WhatsApp" target="_blank" rel="noopener noreferrer">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 

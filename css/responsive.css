@@ -70,10 +70,40 @@
   .cta__illus {
     display: block;
   }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Location */
+  .location__grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+/* ---- 768–1023px: tighter navbar so 5 links + switcher fit ---- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar__links {
+    gap: 0.25rem;
+  }
+
+  .navbar__links a {
+    padding: 0.4rem 0.6rem;
+  }
 }
 
 /* ---- 1024px+ (Desktop) ---- */
 @media (min-width: 1024px) {
+  /* Navbar CTA only where there's room for it */
+  .navbar__links .navbar__cta {
+    display: inline-flex;
+  }
+
+  .navbar__links {
+    gap: 1.25rem;
+  }
+
   /* Assessment cards — 3 columns */
   .assessment__cards {
     grid-template-columns: repeat(3, 1fr);

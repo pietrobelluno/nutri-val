@@ -8,9 +8,13 @@
   /* ---- CONFIG ---- */
   var WHATSAPP_NUMBER = '5554999345681';
   var _docLang = (document.documentElement.lang || '').toLowerCase();
-  var DEFAULT_MESSAGE = _docLang.indexOf('en') === 0
-    ? "Hi, Val! I'd like to book a consultation."
-    : 'Olá, Val! Gostaria de agendar uma consulta.';
+  var IS_EN = _docLang.indexOf('en') === 0;
+  var DEFAULT_MESSAGE = IS_EN
+    ? "Hi, Val! I found your website and I'd like to book a consultation."
+    : 'Olá, Val! Vi seu site e gostaria de agendar uma consulta.';
+  var MENU_LABELS = IS_EN
+    ? { open: 'Open navigation menu', close: 'Close navigation menu' }
+    : { open: 'Abrir menu de navegação', close: 'Fechar menu de navegação' };
 
   /* ---- HELPERS ---- */
   function buildWhatsAppURL(message) {
@@ -65,7 +69,7 @@
     if (hamburger) {
       hamburger.classList.remove('active');
       hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Abrir menu de navegação');
+      hamburger.setAttribute('aria-label', MENU_LABELS.open);
     }
     if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
@@ -119,7 +123,7 @@
       hamburger.setAttribute('aria-expanded', String(isActive));
       hamburger.setAttribute(
         'aria-label',
-        isActive ? 'Fechar menu de navegação' : 'Abrir menu de navegação'
+        isActive ? MENU_LABELS.close : MENU_LABELS.open
       );
 
       if (isActive) {
@@ -311,10 +315,6 @@
     var floatBtn = document.querySelector('.whatsapp-float');
     if (!floatBtn) return;
 
-    floatBtn.href = buildWhatsAppURL();
-    floatBtn.target = '_blank';
-    floatBtn.rel = 'noopener noreferrer';
-
     var hero = document.querySelector('.hero');
     if (!hero) {
       floatBtn.classList.add('visible');
@@ -350,29 +350,52 @@
   }
 
   /* ---- ANALYTICS: OUTBOUND CLICK TRACKING ---- */
+  function getLinkDestination(href) {
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) return 'whatsapp';
+    if (href.indexOf('instagram.com') !== -1) return 'instagram';
+    if (href.indexOf('google.com/maps') !== -1 || href.indexOf('share.google') !== -1) return 'maps';
+    return 'other';
+  }
+
+  /* Explicit data-location wins; otherwise the nearest landmark's id or tag */
+  function getLinkLocation(anchorEl) {
+    if (anchorEl.dataset.location) return anchorEl.dataset.location;
+    var landmark = anchorEl.closest('section, footer, aside, nav');
+    if (!landmark) return 'unknown';
+    return landmark.id || landmark.tagName.toLowerCase();
+  }
+
+  /* Icon-only links have no text — fall back to aria-label */
+  function getLinkLabel(anchorEl) {
+    var text = (anchorEl.textContent || '').trim() || anchorEl.getAttribute('aria-label') || '';
+    return text.slice(0, 80);
+  }
+
   function trackOutboundClick(anchorEl) {
     if (typeof window.gtag !== 'function') return;
 
     var href = anchorEl.href || '';
-    var destination = 'other';
-    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
-      destination = 'whatsapp';
-    } else if (href.indexOf('instagram.com') !== -1) {
-      destination = 'instagram';
-    }
+    var destination = getLinkDestination(href);
+    var location = getLinkLocation(anchorEl);
 
     window.gtag('event', 'outbound_click', {
       destination: destination,
       link_url: href,
-      link_text: (anchorEl.textContent || '').trim().slice(0, 80),
-      link_location: anchorEl.closest('section, footer, aside, nav')
-        ? (anchorEl.closest('section, footer, aside, nav').id || anchorEl.closest('section, footer, aside, nav').tagName.toLowerCase())
-        : 'unknown'
+      link_text: getLinkLabel(anchorEl),
+      link_location: location
     });
+
+    /* GA4 recommended event — mark as key event in GA4 Admin to count as conversion */
+    if (destination === 'whatsapp') {
+      window.gtag('event', 'generate_lead', {
+        method: 'whatsapp',
+        link_location: location
+      });
+    }
   }
 
   function initAnalytics() {
-    var outboundSelector = 'a[href*="wa.me"], a[href*="whatsapp"], a[href*="instagram.com"], [data-whatsapp]';
+    var outboundSelector = 'a[href*="wa.me"], a[href*="whatsapp"], a[href*="instagram.com"], a[href*="google.com/maps"], a[href*="share.google"], [data-whatsapp]';
     document.querySelectorAll(outboundSelector).forEach(function (a) {
       a.addEventListener('click', function () { trackOutboundClick(a); });
     });

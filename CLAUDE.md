@@ -5,11 +5,15 @@ Site da Valéria Schumann, nutricionista em Caxias do Sul (RS). Estático (HTML/
 ## Conversão = clique no WhatsApp
 
 Número: `+55 54 99934-5681` (`5554999345681` no link `wa.me`).
-Evento GA4: `outbound_click` com dimensões `destination`, `link_url`, `link_text`, `link_location`. Disparado em `js/main.js:352-379` pra qualquer link de WhatsApp ou Instagram.
+Eventos GA4 (`js/main.js:352-402`):
+- `outbound_click` com params `destination` (whatsapp/instagram/maps/other), `link_url`, `link_text`, `link_location` — qualquer link de WhatsApp, Instagram ou Google Maps.
+- `generate_lead` (`method: whatsapp`, `link_location`) — só cliques no WhatsApp. É esse que deve ser marcado como key event.
+- `link_location` vem do atributo `data-location` do link (`hero`, `navbar`, `mobile_menu`, `floating`, `online`, `consultas`, `avaliacao`, `faq`, `local`, `contato`, `footer`, `404`). CTA novo → sempre pôr `data-location`.
+- Mensagens pré-preenchidas começam com "Vi seu site" pra Val saber que o lead veio do site.
 
 ## Analytics
 
-- GA4 measurement ID: `G-0MT8F76G0W` (snippet em `index.html:34-41` e `en/index.html:35-42`)
+- GA4 measurement ID: `G-0MT8F76G0W` (snippet em `index.html:38-45` e `en/index.html:38-45`)
 - GA4 numeric property ID (pra Data API): em `scripts/api/.env` (variável `GA4_PROPERTY_ID`). Não é o measurement.
 - Search Console: `https://valeriaschumann.com.br`
 

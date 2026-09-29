@@ -35,6 +35,16 @@ img, picture, video, canvas, svg {
   height: auto;
 }
 
+/* <picture> only swaps the source (WebP/PNG) — lay the <img> out as if it were the direct child */
+picture {
+  display: contents;
+}
+
+/* Otherwise <source> becomes a grid/flex item and takes up a cell */
+picture > source {
+  display: none;
+}
+
 input, button, textarea, select {
   font: inherit;
 }
