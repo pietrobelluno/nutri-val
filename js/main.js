@@ -353,7 +353,7 @@
   function getLinkDestination(href) {
     if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) return 'whatsapp';
     if (href.indexOf('instagram.com') !== -1) return 'instagram';
-    if (href.indexOf('google.com/maps') !== -1 || href.indexOf('share.google') !== -1) return 'maps';
+    if (href.indexOf('google.com/maps') !== -1 || href.indexOf('share.google') !== -1 || href.indexOf('maps.app.goo.gl') !== -1) return 'maps';
     return 'other';
   }
 
@@ -395,7 +395,7 @@
   }
 
   function initAnalytics() {
-    var outboundSelector = 'a[href*="wa.me"], a[href*="whatsapp"], a[href*="instagram.com"], a[href*="google.com/maps"], a[href*="share.google"], [data-whatsapp]';
+    var outboundSelector = 'a[href*="wa.me"], a[href*="whatsapp"], a[href*="instagram.com"], a[href*="google.com/maps"], a[href*="share.google"], a[href*="maps.app.goo.gl"], [data-whatsapp]';
     document.querySelectorAll(outboundSelector).forEach(function (a) {
       a.addEventListener('click', function () { trackOutboundClick(a); });
     });
