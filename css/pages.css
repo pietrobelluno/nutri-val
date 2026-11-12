@@ -1,0 +1,190 @@
+/* ============================================
+   PAGES — landing pages internas (serviços)
+   Usado por /nutricionista-online/, /bioimpedancia-caxias-do-sul/
+   e /en/online-nutritionist/
+   ============================================ */
+
+/* ---- PAGE HERO ---- */
+.page-hero {
+  background: var(--color-cream);
+  padding-top: clamp(7rem, 10vw, 9rem);
+  padding-bottom: var(--space-xl);
+  position: relative;
+  overflow-x: clip;
+}
+
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-md);
+}
+
+.page-hero__lede {
+  font-size: var(--fs-body-lg);
+  color: var(--color-gray-600);
+  line-height: var(--lh-body);
+  max-width: 620px;
+  margin-bottom: var(--space-lg);
+}
+
+.page-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.page-hero__illus {
+  justify-self: center;
+  max-width: 300px;
+}
+
+.page-hero__illus img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- BREADCRUMB ---- */
+.breadcrumb {
+  font-size: var(--fs-small);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-md);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li + li::before {
+  content: '›';
+  margin-right: 0.4rem;
+  color: var(--color-gray-400);
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- CONTENT SECTIONS ---- */
+.page-section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.page-section--white {
+  background: var(--color-white);
+}
+
+.page-section__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-md);
+}
+
+.page-prose {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.page-prose p {
+  color: var(--color-gray-600);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-md);
+}
+
+.page-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- STEP / FEATURE CARDS ---- */
+.step-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0 0;
+}
+
+.step-card {
+  background: var(--color-cream);
+  border: 2px solid var(--color-butter);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.page-section:not(.page-section--white) .step-card {
+  background: var(--color-white);
+}
+
+.step-card__num {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-butter);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.step-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--space-xs);
+}
+
+.step-card p {
+  color: var(--color-gray-600);
+  line-height: var(--lh-body);
+}
+
+/* ---- RELATED LINKS ---- */
+.page-related {
+  text-align: center;
+  margin-top: var(--space-lg);
+  color: var(--color-gray-600);
+}
+
+@media (min-width: 768px) {
+  .page-hero__grid {
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: var(--space-xl);
+  }
+
+  .page-hero__illus {
+    max-width: 360px;
+  }
+
+  .step-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .step-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

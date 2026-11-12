@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://valeriaschumann.com.br/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://valeriaschumann.com.br/"/>
@@ -11,12 +11,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://valeriaschumann.com.br/"/>
   </url>
   <url>
+    <loc>https://valeriaschumann.com.br/nutricionista-online/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://valeriaschumann.com.br/nutricionista-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://valeriaschumann.com.br/en/online-nutritionist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://valeriaschumann.com.br/nutricionista-online/"/>
+  </url>
+  <url>
+    <loc>https://valeriaschumann.com.br/bioimpedancia-caxias-do-sul/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://valeriaschumann.com.br/en/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://valeriaschumann.com.br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://valeriaschumann.com.br/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://valeriaschumann.com.br/"/>
+  </url>
+  <url>
+    <loc>https://valeriaschumann.com.br/en/online-nutritionist/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://valeriaschumann.com.br/nutricionista-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://valeriaschumann.com.br/en/online-nutritionist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://valeriaschumann.com.br/nutricionista-online/"/>
   </url>
 </urlset>

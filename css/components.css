@@ -298,3 +298,10 @@
   width: 28px;
   height: 28px;
 }
+
+/* ---- TEXT LINK (links internos dentro de parágrafos) ---- */
+.text-link {
+  font-weight: var(--fw-bold);
+  color: var(--color-black);
+  background: var(--highlight);
+}
