@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fffdf5">
+  <title>Avaliar no Google | Valéria Schumann, Nutricionista</title>
+
+  <!-- Link curto pra Val mandar aos pacientes: abre direto o formulário de avaliação do Google.
+       O placeid é o do perfil "Nutricionista Val Schumann". -->
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MT8F76G0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0MT8F76G0W', { page_title: 'Avaliar no Google' });
+  </script>
+
+  <script>
+    var REVIEW_URL = 'https://search.google.com/local/writereview?placeid=ChIJT981jgi9CEoRgebRKiV1HqI';
+    var REDIRECT_TIMEOUT_MS = 700;
+
+    function goToReview() {
+      window.location.replace(REVIEW_URL);
+    }
+
+    // Registra o clique no GA4 e redireciona; se o GA não responder, redireciona do mesmo jeito.
+    function trackAndRedirect() {
+      var redirected = false;
+      function redirectOnce() {
+        if (redirected) return;
+        redirected = true;
+        goToReview();
+      }
+      gtag('event', 'outbound_click', {
+        destination: 'google_review',
+        link_url: REVIEW_URL,
+        link_location: 'avaliar',
+        event_callback: redirectOnce
+      });
+      setTimeout(redirectOnce, REDIRECT_TIMEOUT_MS);
+    }
+
+    trackAndRedirect();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=https://search.google.com/local/writereview?placeid=ChIJT981jgi9CEoRgebRKiV1HqI"></noscript>
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <style>
+    body {
+      background: var(--color-cream);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: var(--container-pad);
+    }
+    .review__title { margin-bottom: var(--space-sm); }
+    .review__text { color: var(--color-gray-600); margin: 0 auto var(--space-lg); max-width: 460px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="h1 review__title">Abrindo o Google…</h1>
+    <p class="review__text">Obrigada por tirar um minutinho pra avaliar! Se a página não abrir sozinha, é só tocar no botão.</p>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJT981jgi9CEoRgebRKiV1HqI" class="btn btn--primary" data-location="avaliar" rel="noopener noreferrer">Avaliar no Google</a>
+  </main>
+</body>
+</html>
