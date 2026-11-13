@@ -1639,7 +1639,7 @@
 }
 
 
-/* ---- TESTIMONIALS (section commented out in HTML until content arrives) ---- */
+/* ---- TESTIMONIALS (avaliações do Google) ---- */
 .testimonials {
   background: var(--color-cream);
 }
@@ -1668,6 +1668,15 @@
   font-size: var(--fs-small);
   font-weight: var(--fw-bold);
   color: var(--color-gray-600);
+}
+
+.testimonial-card__source {
+  font-weight: var(--fw-regular);
+}
+
+.testimonials__more {
+  text-align: center;
+  margin-top: var(--space-lg);
 }
 
 

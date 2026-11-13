@@ -8,7 +8,7 @@ Número: `+55 54 99934-5681` (`5554999345681` no link `wa.me`).
 Eventos GA4 (`js/main.js:352-402`):
 - `outbound_click` com params `destination` (whatsapp/instagram/maps/other), `link_url`, `link_text`, `link_location` — qualquer link de WhatsApp, Instagram ou Google Maps.
 - `generate_lead` (`method: whatsapp`, `link_location`) — só cliques no WhatsApp. É esse que deve ser marcado como key event.
-- `link_location` vem do atributo `data-location` do link (`hero`, `navbar`, `mobile_menu`, `floating`, `online`, `consultas`, `avaliacao`, `faq`, `local`, `contato`, `footer`, `404`). CTA novo → sempre pôr `data-location`.
+- `link_location` vem do atributo `data-location` do link (`hero`, `navbar`, `mobile_menu`, `floating`, `online`, `consultas`, `avaliacao`, `faq`, `depoimentos`, `local`, `contato`, `footer`, `404`). CTA novo → sempre pôr `data-location`.
 - Mensagens pré-preenchidas começam com "Vi seu site" pra Val saber que o lead veio do site.
 
 ## Analytics
